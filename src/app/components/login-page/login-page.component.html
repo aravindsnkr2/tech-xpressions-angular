@@ -1,0 +1,17 @@
+<div class="login-container">
+    <div class="login-wrapper">
+        <div class="login-inputs-wrapper"> 
+            <label for="user-name">Username :</label>
+            <input [(ngModel)]="userName" placeholder="Enter user name" type="text">
+        </div>
+        <div class="login-inputs-wrapper"> 
+            <label for="user-name">Password :</label>
+            <input [(ngModel)]="password" type="password">
+        </div>
+        <span class="validity" *ngIf="!valid">* The credentials doesn't match</span>
+        <div class="btn-wrapper">
+            <button class="btn btn-primary" (click)="submitLogin()">Login</button>
+            <button class="btn btn-secondary" (click)="clearLogin()">Clear</button>
+        </div>
+    </div>
+</div>

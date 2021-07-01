@@ -1,0 +1,52 @@
+.login-container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+
+    .login-wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 21vw;
+        padding: 40px;
+        border-radius: 15px;
+        margin: auto;
+        box-shadow: 0 5px 10px 3px #eeeeee;
+        flex-wrap: wrap;
+
+        .login-inputs-wrapper{
+            display: flex;
+            margin: 5px auto;
+            width: 100%;
+        }
+
+        label, input{
+            width: 47%;
+            margin: auto;
+            padding: 5px;
+        }
+
+        .validity {
+            color: red;
+        }
+
+        .btn-wrapper{
+            margin: 15px 0 0;
+            display: flex;
+        }
+
+        button {
+            width: 35%;
+            margin: auto;
+            border: none;
+            border-radius: 4px;
+            padding: 7px;
+            cursor: pointer;
+        }
+
+        .primary {
+            color:white;
+            background-color: #2277ee;
+        }
+    }
+}

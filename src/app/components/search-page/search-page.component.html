@@ -1,0 +1,34 @@
+<nav class="navbar navbar-dark bg-dark">
+    <div class="row menubar w-50 mx-4">
+        <div class="col-md-8">
+            <input type="text" class="form-control" placeholder="Enter movie name" name="search"
+                [(ngModel)]="searchQuery">
+        </div>
+        <div class="col-md-4">
+            <button type="button" class="btn btn-primary" (click)="search()">Search</button>
+        </div>
+    </div>
+</nav>
+
+<section class="card_container">
+    <div *ngIf="!movies">
+        <h1>Movie search engine</h1>
+        <p>This app uses the open API provided by OMBd to look up movie data from IMDb, please search for your favorite
+            movie</p>
+        <a href="https://en.wikipedia.org/wiki/IMDb">For more information</a>
+    </div>
+    <div class="card" *ngFor="let movie of movies">
+        <img src="{{movie.Poster}}" alt="movie_img" class="image">
+        <div class="card-body">
+            <h5>{{movie.Title}}</h5>
+            <hr>
+            <div class="row px-3">
+                <p>
+                    Type: {{movie.Type | titlecase }}<br>
+                    Release Year: {{movie.Year}} <br>
+                    IMDb Id: {{movie.imdbID}}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
